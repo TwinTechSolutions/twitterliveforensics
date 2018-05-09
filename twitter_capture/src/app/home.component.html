@@ -1,0 +1,48 @@
+<div class="fullH row">
+    <div class="fullH col-md-4 overflowYA">
+        <a class="list-group-item groupItemHead">
+            <h3>Users</h3>
+        </a>
+        <div class="list-group">
+            <a *ngFor="let user of users | async; let i = index" class="list-group-item cursorPointer" (click)="setCurrentUserAndLoadTweets(user)"
+                [class.active]="user == currentUser">
+
+                <span *ngIf="user.unseenCount > 0" class="badge mybadge">{{user.unseenCount}}</span>
+                <span class="usersName">
+                    <img src="assets/img/dp.png" class="userImg"> @{{user.username}}
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="fullH col-md-8">
+        <div *ngIf="currentUser == null || currentUser == undefined" class="fullWH twittsLoaderContainer">
+            <video preload="auto" autoplay="autoplay" muted="muted" loop="loop" webkit-playsinline="" class="videoloader">
+                <source src="assets/vid/vid.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div *ngIf="currentUser != null || currentUser != undefined" class="fullWH tweetsContainer overflowYA">
+            <a class="list-group-item twittsHeader">
+                <div class="loader"></div>
+                <h3>Crawling Twitter</h3>
+            </a>
+            <div *ngFor="let tweet of tweets | async; let i = index" class="fullW oneTweet">
+                <img src="assets/img/dp.png" class="tweetUserPic">
+                <div class="fullW header">
+                    <div class="identi">
+                        <span class="tweetUsername">@{{currentUser.username}}</span>
+                        <br/>
+                        <span class="tweetTime">{{tweet.created_at}}</span>
+                    </div>
+                </div>
+                <p class="text">{{tweet.text}}
+                </p>
+                <p class="info">
+                    <span>{{tweet.reply_count}} Replies</span>
+                    <span>{{tweet.retweet_count}} Retweets</span>
+                    <span>{{tweet.favorite_count}} Favorites</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

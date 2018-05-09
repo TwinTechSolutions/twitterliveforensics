@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-md-8">
+        <div class="text-center">
+            <h3>Users</h3>
+        </div>
+        <hr/>
+        <table class="table table-striped">
+            <thead>
+                <th>#</th>
+                <th>Username</th>
+                <th>Full Name</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users | async; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.fullName}}</td>
+                    <td>
+                        <button class="btn btn-danger" (click)="deleteUser(user.key)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#</td>
+                    <td>
+                        <input type="text" placeholder="username without @" #username class="form-control" />
+                    </td>
+                    <td>
+                        <input type="text" placeholder="full name" #fullName class="form-control" />
+                    </td>
+                    <td>
+                        <button class="btn btn-success" (click)="addUser(username.value, fullName.value)">Add</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <div class="text-center">
+            <h3>Keywords</h3>
+        </div>
+        <hr/>
+        <table class="table table-striped">
+            <thead>
+                <th>#</th>
+                <th>Keyword</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let keyword of keywords | async; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{keyword.keyword}}</td>
+                    <td>
+                        <button class="btn btn-danger" (click)="deleteKeyword(keyword.key)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#</td>
+                    <td>
+                        <input type="text" class="form-control" placeholder="keyword" #key/>
+                    </td>
+                    <td>
+                        <button class="btn btn-success" (click)="addKeyword(key.value)">Add</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

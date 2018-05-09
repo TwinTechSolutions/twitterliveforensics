@@ -1,0 +1,23 @@
+<nav class="navbar navbar-default myNav">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand myNavBrand" [routerLink]="['']">Twitter Capture
+                <div class="loader"></div>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a [routerLink]="['admin']" class="adminButton">
+                        <span>Admin (Raheem Akhtar)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container myContainer">
+    <router-outlet></router-outlet>
+</div>

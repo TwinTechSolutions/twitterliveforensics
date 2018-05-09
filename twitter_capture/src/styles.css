@@ -1,0 +1,245 @@
+html, body{
+
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.fullW{
+
+    width: 100% !important;
+}
+
+.fullH{
+
+    height: 100% !important;
+}
+
+.fullWH{
+
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.overflowXA{
+
+    overflow-x: auto !important;
+}
+
+.overflowYA{
+
+    overflow-y: auto !important;
+}
+
+.overflowXYA{
+
+    overflow-x: auto !important;
+    overflow-y: auto !important;
+}
+
+body{
+
+    font-family: Arial !important;
+}
+
+.centerText{
+
+    text-align: center;
+}
+
+.cursorPointer{
+
+    cursor: pointer;
+}
+
+.groupItemHead{
+
+    text-align: center;
+    color: white !important;
+    background-color: #3498db !important;
+}
+
+.usersName{
+
+    font-weight: bold;
+    color: #555;
+}
+
+.twittsHeader{
+
+     text-align: center;
+}
+
+.twittsHeader:hover{
+
+    background-color: unset !important;
+    cursor: progress;
+}
+
+.twittsHeader .loader{
+
+    height: 50px;
+    width: 50px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    animation: spin 1s linear infinite;
+}
+
+.myNavBrand .loader{
+
+    height: 20px;
+    width: 20px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+.twittsLoaderContainer{
+
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.videoloader{
+
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
+}
+
+.adminButton span{
+
+    background-color: #3498db;
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.mybadge{
+    background-color: #ff0032 !important;
+}
+
+.userImg{
+
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.myNav{
+
+    z-index: 2;
+}
+
+.myContainer{
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    padding-top: 73px;
+}
+
+.oneTweet{
+
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 10px;
+    /* box-shadow: 0 0 5px 2px #f0f0f0; */
+    background-color: #fafafa;
+    position: relative;
+    margin: 30px 0;
+}
+
+.oneTweet .header{
+
+    position: relative;
+    padding: 0 0 0 60px
+}
+
+.oneTweet .tweetUserPic{
+
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+}
+
+.tweetUsername{
+
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.tweetTime{
+
+    font-weight: bold;
+    font-size: 12px;
+    color: #777;
+}
+
+.oneTweet .text{
+
+    padding: 10px 0 0 0;
+    font-size: 17px;
+}
+
+.oneTweet .info span{
+
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #555;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+
+/* You can add global styles to this file, and also import other style files */
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2 !important;
+    color: white !important;
+    background-color: #f0f0f0 !important;
+    border-color: #ddd !important;
+}
+
+.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
+    color: white !important;
+    background-color: #ff0032 !important;
+}
+
+@media (min-width: 992px){
+.container {
+    width: 100% !important;
+}
+}
+
+@media (min-width: 768px){
+
+.container {
+    width: 100% !important;
+}
+}
