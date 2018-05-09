@@ -1,0 +1,18 @@
+Requirements
+------------
+
+- Node. At least version 9.8.0. You can download node here (https://nodejs.org/en/).
+Current version of node is 9.11.1
+- NPM. At least version 5.6.0. You can download NPM here (https://www.npmjs.com/get-npm)
+
+How to build
+-------------
+- Open a terminal in the source directly and do `npm install`.
+Then run this command "npm i @angular/cli -g"
+
+- To run the server, open a terminal in the source app and do `node server.js`
+- To run the web app, open another terminal in the source directory and do 'ng serve'
+
+Access the app
+--------------
+Open your browser to `http://localhost:4200`
